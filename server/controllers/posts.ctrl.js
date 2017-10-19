@@ -43,7 +43,7 @@ router.route('/:id')
     })
     .put(function (req, res) {
             var p = request.body;
-        procedures.update(req.params.id, p.id, p.content, p.categoryid)
+        procedures.update(req.params.id, p.title, p.content, p.categoryid)
             .then(function () {
                 res.sendStatus(204);
             }).catch(function (error) {
