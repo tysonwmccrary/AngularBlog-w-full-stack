@@ -1,0 +1,25 @@
+{
+  "name": "angularblog",
+  "version": "1.0.0",
+  "description": "angularblog full stack",
+  "main": "server/index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tysonwmccrary/AngularBlog-w-full-stack.git"
+  },
+  "author": "Tyson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tysonwmccrary/AngularBlog-w-full-stack/issues"
+  },
+  "homepage": "https://github.com/tysonwmccrary/AngularBlog-w-full-stack#readme"
+}
