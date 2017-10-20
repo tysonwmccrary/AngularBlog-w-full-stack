@@ -6,7 +6,7 @@ var categories = require('./controllers/categories.ctrl.js');
 var router = express.Router();
 
 
-router.use('/posts', Posts);
+router.use('/posts', posts);
 router.use('/users', users);
 router.use('/categories', categories);
 

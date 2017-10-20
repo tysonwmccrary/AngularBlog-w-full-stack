@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="page-header">
+
+        <a href="/compose">Create New Post</a>
+        <div class="post-container">
+            <div class="post" ng-repeat="p in posts">
+                <h3>{{ p.title }}</h3>
+                <h5>Written by {{ p.authorfirstname }} {{ p.authorlastname }}</h5>
+                <h5>{{ p.createdAt | date: 'short' }}</h5>
+                <p><a ng-href="/{{ p.id }}">Click to Read More</p>
+            </div>
+        </div>
+    </div>
+</div>

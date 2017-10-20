@@ -7,7 +7,7 @@ exports.all = function() {
 }
 
 exports.read = function(id) {
-    return db.row('GetAllPosts', [id]);
+    return db.row('GetPost', [id]);
 }
 
 exports.update = function(id, title, content, categoryid) {  //When function is called this must match the order.

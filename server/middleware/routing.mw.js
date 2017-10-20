@@ -6,7 +6,7 @@ var clientPath = path.join(__dirname, '../../client');
 
 exports.stateRouting = function(req, res, next) {
     if (isAsset(req.url)) {
-        return next(); //This call the next route handler.
+        return next(); //This calls the next route handler.
     } else {
         res.sendFile(path.join(clientPath, 'index.html'));
     }

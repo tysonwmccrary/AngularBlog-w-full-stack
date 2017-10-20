@@ -1,4 +1,4 @@
-//This controls the post procedure.
+//This post control file will control the post procedure.
 //This is the get and post routes used to interact with database.
 
 var express = require('express');
