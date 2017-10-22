@@ -45,4 +45,36 @@ angular.module('myblog.controllers', [])
                 $location.replace().path('/' + $routeParams.id);
             });
         }
-    }]);
+    }])
+//This used for frontend login.
+.controller('LoginController', ['$scope', 'UserService', '$location', function($scope, UserService, $location) {
+    UserService.me().then(function () {
+        redirect();
+    });
+
+    $scope.login = function () {
+        UserService.login($scope.email, $scope.password)
+            .then(function () {
+                redirect();
+            }, function (err) {
+                console.log(err);
+            });
+    }
+
+    function redirect() {
+        var dest = $location.search().dest;
+        if (!dest) { dest = '/'; }
+        $location.replace().path(dest).search('dest', null);
+    }
+}])
+    .controller('UserListController', ['$scope', 'User', function ($scope, User) {
+        $scope.users = User.query();
+
+        $scope.createUser = function () {
+            var u = new User($scope.newUser);
+            u.$save(function () {
+                $scope.newUser = {};  //Clear out the fields once its created.
+                $scope.users = User.query();  //Returns the list of the user once account is created.
+            });
+        }
+    }])

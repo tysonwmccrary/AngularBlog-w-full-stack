@@ -55,7 +55,7 @@ function configurePassport(app) {
     }, pool);
 
     app.use(session({
-        secret: 'random string!',
+        secret: 'myrandomstringthatneedstobeusedtomakepasswordwork',
         store: sessionStore,
         resave: false,
         saveUninitialized: false

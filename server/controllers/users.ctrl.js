@@ -1,7 +1,7 @@
 var express = require('express');
 var passport = require('passport'); //Used because it is requested to login.
 var procedures = require('../procedures/users.proc.js');
-var auth = require('../middleware/auth.mw.js');  
+var auth = require('../middleware/auth.mw.js'); //Runs the middleware for log in verfication. 
 var utils = require('../utils');
 
 var router = express.Router();
@@ -37,7 +37,8 @@ router.get('/logout', function (req, res) {
     });
 });
 
-//This protects the route, and checks 
+//This is to ask who is the current user.
+//Must be protected by auth.isloggedIn.
 router.get('/me', function (req, res) {
     res.send(req.user);
 });
