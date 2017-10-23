@@ -19,7 +19,7 @@ angular.module('myblog', ['ngRoute', 'ngResource', 'myblog.controllers', 'myblog
                 templateUrl: 'views/user_list.html',
                 controller: 'UseListController',
                 requiresLogin: true,
-                requiresAdmin: true
+                //requiresAdmin: true
             })
             .when('/:id/update', {
                 templateUrl: 'views/update_view.html',

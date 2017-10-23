@@ -1,20 +1,21 @@
 <div class="container">
     <div class="page-header">
-
-        <form ng-submit="save()">
-            <input type="text" ng-model="post.title" placeholder="Enter name of Title">
-            <select ng-model="post.categoryid">
+        <h1>Update Your Post</h1>
+        <div class="post-box">
+            <form ng-submit="save()">
+                <input type="text" ng-model="post.title" placeholder="Enter name of Title">
+                <select ng-model="post.categoryid">
                 <option value=""> Select Category</option>
                 <option ng-repeat="c in categories" value="{{ c.id }}">{{ c.name }}</option>
             </select>
 
-            <select ng-model="post.userid">
+                <select ng-model="post.userid">
                 <option value="">Select User</option>
                  <option ng-repeat="u in users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
             </select>
-
-            <textarea ng-model="post.content" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="Post Content">
+        </div>
+        <textarea id="post-blog" ng-model="post.content" id="" cols="94" rows="10"></textarea>
+        <input type="submit" value="Post Content">
         </form>
 
 

@@ -47,7 +47,7 @@ angular.module('myblog.controllers', [])
         }
     }])
 //This used for frontend login.
-.controller('LoginController', ['$scope', 'UserService', '$location', function($scope, UserService, $location) {
+.controller('LoginController', ['$scope', 'UserService', '$location', function ($scope, UserService, $location) {
     UserService.me().then(function () {
         redirect();
     });

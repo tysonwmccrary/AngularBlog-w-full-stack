@@ -1,0 +1,48 @@
+body {
+    background-color: hsla(0, 0%, 0%, 0.91);
+}
+
+a {
+    color: black;
+}
+
+.post-container {
+    border: 3px solid white;
+    border-radius: 5px;
+    background-color: darkolivegreen;
+    position: relative;
+    padding: 25px;
+    margin: 10px;
+
+}
+
+.post {
+    position: relative;
+    background: rgba(76, 175, 80, 0.3);
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#post-list {
+    background-color: darkolivegreen;
+}
+
+.post-box {
+    background-color: rgba(0, 157, 255, 0.63);
+    position: relative;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+#post-blog {
+     background: white;
+     position: relative;
+     border: 3px solid white;
+    border-radius: 5px;
+}

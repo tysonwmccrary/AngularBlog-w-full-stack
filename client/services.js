@@ -1,18 +1,10 @@
-angular.moduel('myblog.services', [])
+angular.module('myblog.services', [])
 
     .service('UserService', ['$http', '$location', function ($http, $location) {
         var currentUser;
 
         this.isLoggedIn = function () {
             if (currentUser) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        this.isAdmin = function () {
-            if (currentUser && currentUser.role === 'admin') {
                 return true;
             } else {
                 return false;
