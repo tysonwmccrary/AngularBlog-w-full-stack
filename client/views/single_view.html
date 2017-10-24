@@ -12,8 +12,10 @@
                 <h5>{{ post.createdAt | date: 'short' }}</h5>
                 <p>{{ post.content }}</p>
 
-                <button ng-click ="edit()">Edit your Post</button>
-                <button ng-click ="delete()">Delete your Post</button>
+                <button style="border: 1px;
+     border-radius: 5px;" ng-click ="edit()">Edit your Post</button>
+                <button style="border: 1px;
+     border-radius: 5px;" ng-click ="delete()">Delete your Post</button>
             </div>
         </div>
     </div>

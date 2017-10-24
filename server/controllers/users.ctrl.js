@@ -48,10 +48,10 @@ router.route('/')
     .get(function (req, res) {
         procedures.all()
             .then(function (users) {
-                response.send(users);
+                res.send(users);
             }).catch(function (error) {
                 console.log(error);
-                response.sendStatus(500);
+                res.sendStatus(500);
             });
     })
     //This is used from user.proc.js to post the Insert User created.

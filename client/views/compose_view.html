@@ -7,7 +7,7 @@
 
         <div class="post-box">
             <form ng-submit="save()">
-                <input type="text" ng-model="post.title" placeholder="Enter name of Title">
+                <input style="border: 1px solid white; border-radius: 5px;" type="text" ng-model="post.title" placeholder="Enter name of Title">
                 <select ng-model="post.categoryid">
                 <option value=""> Select Category</option>
                 <option ng-repeat="c in categories" value="{{ c.id }}">{{ c.name }}</option>
@@ -17,7 +17,6 @@
                 <option value="">Select User</option>
                  <option ng-repeat="u in users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
             </select>
-        </div>
 
         <textarea style="max-width:100%;" id="post-blog" ng-model="post.content" id="" cols="70" rows="10"></textarea>
 
@@ -25,6 +24,8 @@
         
         <input type="submit" value="Post Content">
         </form>
+        </div>
+
 
 
     </div>
