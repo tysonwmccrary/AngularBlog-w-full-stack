@@ -1,6 +1,10 @@
 <div class="container">
     <div class="page-header">
-        <h1>Update Your Post</h1>
+        
+        <h1>Create A New Post</h1>
+
+        <hr>
+
         <div class="post-box">
             <form ng-submit="save()">
                 <input type="text" ng-model="post.title" placeholder="Enter name of Title">
@@ -14,7 +18,11 @@
                  <option ng-repeat="u in users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
             </select>
         </div>
-        <textarea id="post-blog" ng-model="post.content" id="" cols="94" rows="10"></textarea>
+
+        <textarea style="max-width:100%;" id="post-blog" ng-model="post.content" id="" cols="70" rows="10"></textarea>
+
+        <br>
+        
         <input type="submit" value="Post Content">
         </form>
 

@@ -2,23 +2,48 @@ body {
     background-color: hsla(0, 0%, 0%, 0.91);
 }
 
+.page-header {
+text-align: center;
+margin: 25px;
+}
+
+@font-face {
+  font-family: 'Courier New Bold', 'BEBAS___', 'Bangers' 'glyphicons-halflings';
+  src:url('fonts')
+}
+
+
 a {
     color: black;
 }
 
+h1 {
+    font-family: 'Bangers';
+    color: white;
+}
+
+h3 {
+    font-family: 'Bangers'
+}
+
+
+h5 {
+    font-family: 'BEBAS___' 
+}
+
+
 .post-container {
     border: 3px solid white;
     border-radius: 5px;
-    background-color: darkolivegreen;
+    background-color: darkgreen;
     position: relative;
     padding: 25px;
     margin: 10px;
-
 }
 
 .post {
     position: relative;
-    background: rgba(76, 175, 80, 0.3);
+    background: lightblue;
     border: 3px solid black;
     border-radius: 5px;
     padding: 10px;
@@ -26,11 +51,11 @@ a {
 }
 
 #post-list {
-    background-color: darkolivegreen;
+    background-color: darkgreen
 }
 
 .post-box {
-    background-color: rgba(0, 157, 255, 0.63);
+    background-color: #32B0F2;
     position: relative;
     border: 3px solid white;
     border-radius: 5px;
@@ -44,5 +69,6 @@ a {
      background: white;
      position: relative;
      border: 3px solid white;
-    border-radius: 5px;
+     border-radius: 5px;
+     margin: 10px;
 }
