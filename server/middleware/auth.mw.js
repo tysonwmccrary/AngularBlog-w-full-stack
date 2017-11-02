@@ -15,4 +15,3 @@ exports.isAdmin = function (req, res, next) {
 }
 
 //This is used from the user.ctrl.js file for the logged in/out information.
-//

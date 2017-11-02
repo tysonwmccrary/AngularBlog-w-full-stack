@@ -1,7 +1,7 @@
 angular.module('myblog.factories', [])
 
 .factory('Post', ['$resource', function($resource) {
-    return $resource('/api/Posts/:id', { id: '@id' }, {
+    return $resource('/api/posts/:id', { id: '@id' }, {
         update: {
             method: 'PUT'
         }

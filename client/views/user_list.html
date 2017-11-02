@@ -1,25 +1,50 @@
 <div class="container">
     <div class="page-header">
+
+        <h1>Create a New User</h1>
+
         <div class="post-box">
             <form ng-submit="createUser()">
-                <input type="text" placeholder="First Name" ng-model="newUser.firstname">
-                <input type="text" placeholder="Last Name" ng-model="newUser.lastname"><br>
-                <input type="email" placeholder="Enter Email" ng-model="newUser.email">
-                <input type="password" placeholder="Enter Password" ng-model="newUser.password"><br>
+                <input style="margin: 10px;" type="text" placeholder="First Name" ng-model="newUser.firstname">
+                <input style="margin: 10px;" type="text" placeholder="Last Name" ng-model="newUser.lastname"><br>
+                <input style="margin: 10px;" type="email" placeholder="Enter Email" ng-model="newUser.email">
+                <input style="margin: 10px;" type="password" placeholder="Enter Password" ng-model="newUser.password">
+                <br>
+                <br>
                 <input type="submit" value="Create New User">
             </form>
         </div>
-        <br>
-        
-        <h1>User List</h1>
-        <div class="post-container">
-            <div ng-repeat="user in users">
 
-                <h3>{{ user.firstname }} {{ user.lastname }}</h3>
-                <h4>{{ user.email }}</h4>
-                <h5>{{ user.role }}</h5>
+        <br>
+
+        <h1>List of All Users</h1>
+
+        <div class="post-container">
+            <div style="color: white;" ng-repeat="u in users">
+
+                <h4>{{ u.firstname }} {{ u.lastname }}</h4>
 
             </div>
         </div>
+
+        <hr>
+
+        <h1>Create a New Category</h1>
+
+        <div>
+            <form ng-submit="createCategory()">
+                <input type="text" placeholder="Name of Category" ng-model="newCategory.name">
+                <input type="submit" value="Create New Category">
+            </form>
+        </div>
+
+        <h1>List of All Categories</h1>
+
+        <div class="post-container">
+            <div style="color: white;" ng-repeat="c in categories">
+                <h4>{{ c.name }}</h4>
+            </div>
+        </div>
+
     </div>
 </div>

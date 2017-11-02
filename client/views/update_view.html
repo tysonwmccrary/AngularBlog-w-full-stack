@@ -14,15 +14,16 @@
                             <option value=""> Select Category</option>
                             <option ng-repeat="c in categories" value="{{ c.id }}">{{ c.name }}</option>
                         </select>
-                </div>
+                
 
               
-                <textarea style="max-width:100%;" id="post-blog" ng-model="post.content" id="" cols="70" rows="10"></textarea>
+                <textarea style="max-width:100%;" id="post-blog" ng-model="post.content" id="" cols="60" rows="10"></textarea>
 
                 <br>
 
                 <input style="border: 1px; border-radius: 5px;" type="submit" value="Post Content">
                 </form>
+                </div>
 
             </div>
         </div>

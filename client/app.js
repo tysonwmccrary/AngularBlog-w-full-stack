@@ -5,7 +5,8 @@ angular.module('myblog', ['ngRoute', 'ngResource', 'myblog.controllers', 'myblog
         $routeProvider
             .when('/', {
                 templateUrl: 'views/list.html',
-                controller: 'PostListController'
+                controller: 'PostListController',
+                requiresLogin: true
             })
             .when('/compose', {
                 templateUrl: 'views/compose_view.html',
@@ -17,8 +18,8 @@ angular.module('myblog', ['ngRoute', 'ngResource', 'myblog.controllers', 'myblog
             })
             .when('/users', {
                 templateUrl: 'views/user_list.html',
-                controller: 'UseListController',
-                requiresLogin: true,
+                controller: 'UserListController',
+                // requiresLogin: true,
                 //requiresAdmin: true
             })
             .when('/:id/update', {

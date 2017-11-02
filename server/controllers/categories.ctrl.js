@@ -13,6 +13,16 @@ router.route('/')
                 console.log(error);
                 response.sendStatus(500);
             });
+    })
+    .post(function (request, response) {
+        var p = request.body;
+        procedures.create(p.name)
+            .then(function (id) {
+                response.status(201).send(id);
+            }).catch(function (error) {
+                console.log(error);
+                response.sendStatus(500);
+            });
     });
 
 module.exports = router;

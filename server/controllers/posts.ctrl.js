@@ -8,13 +8,13 @@ var router = express.Router();
 
 //The actual URL to /api/Posts
 router.route('/')
-    .get(function (request, response) {
+    .get(function (request, response) { //This is the initial get request into the server.
         procedures.all()
-            .then(function (post) {
-                response.send(post);
+            .then(function (post) { //Passes in the post as an array.
+                response.send(post); //Sends to server in json format. 
             }).catch(function (error) {
                 console.log(error);
-                response.sendStatus(500);
+                response.sendStatus(500); //500 is used if the information in server in not avaialble.
             });
     })
     .post(function (request, response) {
@@ -23,10 +23,10 @@ router.route('/')
         var p = request.body;
         procedures.create(p.title, p.content, p.userid, p.categoryid)
             .then(function (id) {
-                response.status(201).send(id);
+                response.status(201).send(id); //201 is used to create in server.
             }).catch(function (error) {
                 console.log(error);
-                response.sendStatus(500);
+                response.sendStatus(500); //500 is used if the information in server in not avaialble.
             });
     });
 
@@ -38,26 +38,26 @@ router.route('/:id')
                 res.send(post);
             }).catch(function (error) {
                 console.log(error);
-                res.sendStatus(500);
+                res.sendStatus(500); //500 is used if the information in server in not avaialble.
             });
     })
     .put(function (req, res) {
-            var p = request.body;
+            var p = req.body;
         procedures.update(req.params.id, p.title, p.content, p.categoryid)
             .then(function () {
-                res.sendStatus(204);
+                res.sendStatus(204); //204 is used to change information in the server, in this case to update information.
             }).catch(function (error) {
                 console.log(error);
-                res.sendStatus(500);
+                res.sendStatus(500); //500 is used if the information in server in not avaialble.
             });
     })
     .delete(function (req, res) {
         procedures.destroy(req.params.id)
             .then(function () {
-                res.sendStatus(204);
+                res.sendStatus(204); //204 is used to change information in the server in this case to delete information.
             }).catch(function (error) {
                 console.log(error);
-                res.sendStatus(500);
+                res.sendStatus(500); //500 is used if the information in server in not avaialble.
             });
     });
 //Make the router avaiable to all routes 

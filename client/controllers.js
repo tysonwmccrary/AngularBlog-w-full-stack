@@ -44,7 +44,16 @@ angular.module('myblog.controllers', [])
         $scope.save = function () {
             $scope.post.$update(function () {
                 $location.replace().path('/' + $routeParams.id);
+            }).then(function () {
+                redirect();
+            }, function (err) {
+                console.log(err);
             });
+        }
+        function redirect() {
+            var dest = $location.search().dest;
+            if (!dest) { dest = '/'; }
+            $location.replace().path(dest).search('dest', null);
         }
     }])
 //This used for frontend login.
@@ -68,9 +77,8 @@ angular.module('myblog.controllers', [])
         $location.replace().path(dest).search('dest', null);
     }
 }])
-    .controller('UserListController', ['$scope', 'User', function ($scope, User) {
+    .controller('UserListController', ['$scope', 'User', 'Category', function ($scope, User, Category) {
         $scope.users = User.query();
-
         $scope.createUser = function () {
             var u = new User($scope.newUser);
             u.$save(function () {
@@ -78,4 +86,14 @@ angular.module('myblog.controllers', [])
                 $scope.users = User.query();  //Returns the list of the user once account is created.
             });
         }
+        $scope.categories = Category.query();
+        $scope.createCategory = function () {
+            var c = new Category($scope.newCategory);
+            c.$save(function () {
+                $scope.newCategory = {};
+                $scope.categories = Category.query();
+            });
+        }
+
     }])
+    
