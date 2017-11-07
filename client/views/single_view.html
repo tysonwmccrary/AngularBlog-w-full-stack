@@ -1,22 +1,32 @@
 <div class="container">
+
     <div class="page-header">
+        <h1>Single View Of Post</h1>
+    </div>
 
-        <div class="post-container">
-            <h1>Single View Of Post</h1>
+    <div class="topbottons">
+        <a href="/"><button style="float: left;" type="button" class="btn btn-success btn btn-lg">Home</button></a>
+    </div>
 
-            <hr>
-            
-            <div class="post">
-                <h3>{{ post.title }}</h3>
-                <h5>Written by {{ post.authorfirstname }} {{ post.authorlastname }}</h5>
-                <h5>{{ post.createdAt | date: 'short' }}</h5>
-                <p>{{ post.content }}</p>
+    <br>
 
-                <button style="border: 1px;
-     border-radius: 5px;" ng-click ="edit()">Edit your Post</button>
-                <button style="border: 1px;
-     border-radius: 5px;" ng-click ="delete()">Delete your Post</button>
-            </div>
+    <hr>
+
+    <div class="post-container">
+
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <h5>Written by {{ post.authorfirstname }} {{ post.authorlastname }}</h5>
+            <h5>{{ post.createdAt | date: 'short' }}</h5>
+            <p>{{ post.content }}</p>
+        </div>
+
+        <div class="page-header">
+            <button style="border: 1px;
+     border-radius: 5px;" ng-click="edit()">Edit your Post</button>
+            <button style="border: 1px;
+     border-radius: 5px;" ng-click="delete()">Delete your Post</button>
         </div>
     </div>
+</div>
 </div>

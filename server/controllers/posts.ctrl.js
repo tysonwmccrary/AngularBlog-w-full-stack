@@ -10,8 +10,8 @@ var router = express.Router();
 router.route('/')
     .get(function (request, response) { //This is the initial get request into the server.
         procedures.all()
-            .then(function (post) { //Passes in the post as an array.
-                response.send(post); //Sends to server in json format. 
+            .then(function (posts) { //Passes in the post as an array.
+                response.send(posts); //Sends to server in json format. 
             }).catch(function (error) {
                 console.log(error);
                 response.sendStatus(500); //500 is used if the information in server in not avaialble.
@@ -30,12 +30,12 @@ router.route('/')
             });
     });
 
-//The actual route to api/Post/:id
+//The actual route to api/Posts/:id
 router.route('/:id')
     .get(function (req, res) {
         procedures.read(req.params.id)
-            .then(function (post) {
-                res.send(post);
+            .then(function (posts) {
+                res.send(posts);
             }).catch(function (error) {
                 console.log(error);
                 res.sendStatus(500); //500 is used if the information in server in not avaialble.

@@ -6,7 +6,8 @@ var utils = require('../utils');
 
 var router = express.Router();
 
-//This us used to login and out.
+//This is used to login and out.
+//This is also the route to /api/users/
 router.post('/login', function(req, res, next) {
     passport.authenticate('local', function (err, user, info) {
         if (err) {

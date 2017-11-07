@@ -22,6 +22,10 @@ angular.module('myblog', ['ngRoute', 'ngResource', 'myblog.controllers', 'myblog
                 // requiresLogin: true,
                 //requiresAdmin: true
             })
+            .when('/categories', {
+                templateUrl: 'views/category_list.html',
+                controller: 'CategoryListController',
+            })
             .when('/:id/update', {
                 templateUrl: 'views/update_view.html',
                 controller: 'UpdatePostController'

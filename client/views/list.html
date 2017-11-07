@@ -4,9 +4,11 @@
         <h1>My Blog Report</h1>
 
     </div>
-    
-    <div class="primary">
-        <button type="button" class="btn btn-primary">Primary</button>
+
+    <div class="topbottons">
+        <a href="/users"><button type="button" class="btn btn-primary btn btn-lg">Show Users</button></a>
+        <a href="/categories"><button type="button" class="btn btn-info btn btn-lg">Show Categories</button></a>
+        <button style="float: right;" type="button" class=" btn btn-warning btn btn-lg">LogOut</button>
     </div>
 
     <hr>
@@ -17,7 +19,7 @@
 
     <div class="post-container">
         <div id="post-list">
-            <div class="post" ng-repeat="p in posts">
+            <div class="post" ng-repeat="p in post">
                 <h3>{{ p.title }}</h3>
                 <h5>Written by {{ p.authorfirstname }} {{ p.authorlastname }}</h5>
                 <h5>{{ p.createdAt | date: 'short' }}</h5>

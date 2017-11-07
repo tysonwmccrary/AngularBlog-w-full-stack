@@ -1,50 +1,44 @@
 <div class="container">
+
     <div class="page-header">
 
-        <h1>Create a New User</h1>
+        <h1>Users page</h1>
 
-        <div class="post-box">
-            <form ng-submit="createUser()">
-                <input style="margin: 10px;" type="text" placeholder="First Name" ng-model="newUser.firstname">
-                <input style="margin: 10px;" type="text" placeholder="Last Name" ng-model="newUser.lastname"><br>
-                <input style="margin: 10px;" type="email" placeholder="Enter Email" ng-model="newUser.email">
-                <input style="margin: 10px;" type="password" placeholder="Enter Password" ng-model="newUser.password">
-                <br>
-                <br>
-                <input type="submit" value="Create New User">
-            </form>
+        <div class="topbottons">
+            <a href="/"><button style="float: left;" type="button" class="btn btn-success btn btn-lg">Home</button></a>
+            <button style="float: right;" type="button" class=" btn btn-warning btn btn-lg">LogOut</button>
+
+            <br>
+            <br>
+
+            <hr>
+
+            <h1>Create a New User</h1>
+
+            <div class="post-box">
+                <form ng-submit="createUser()">
+                    <input style="margin: 10px;" type="text" placeholder="First Name" ng-model="newUser.firstname">
+                    <input style="margin: 10px;" type="text" placeholder="Last Name" ng-model="newUser.lastname"><br>
+                    <input style="margin: 10px;" type="email" placeholder="Enter Email" ng-model="newUser.email">
+                    <input style="margin: 10px;" type="password" placeholder="Enter Password" ng-model="newUser.password">
+                    <br>
+                    <br>
+                    <input style="border: 1px; border-radius: 5px;" type="submit" value="Create New User">
+                </form>
+            </div>
+
+
         </div>
 
-        <br>
+
+        <hr>
 
         <h1>List of All Users</h1>
-
+        
         <div class="post-container">
-            <div style="color: white;" ng-repeat="u in users">
+            <div style="color: white;" ng-repeat="u in user">
 
                 <h4>{{ u.firstname }} {{ u.lastname }}</h4>
 
             </div>
         </div>
-
-        <hr>
-
-        <h1>Create a New Category</h1>
-
-        <div>
-            <form ng-submit="createCategory()">
-                <input type="text" placeholder="Name of Category" ng-model="newCategory.name">
-                <input type="submit" value="Create New Category">
-            </form>
-        </div>
-
-        <h1>List of All Categories</h1>
-
-        <div class="post-container">
-            <div style="color: white;" ng-repeat="c in categories">
-                <h4>{{ c.name }}</h4>
-            </div>
-        </div>
-
-    </div>
-</div>

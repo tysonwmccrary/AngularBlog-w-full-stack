@@ -1,32 +1,41 @@
 <div class="container">
+
     <div class="page-header">
-        
         <h1>Create A New Post</h1>
-
-        <hr>
-
-        <div class="post-box">
-            <form ng-submit="save()">
-                <input style="border: 1px solid white; border-radius: 5px;" type="text" ng-model="post.title" placeholder="Enter name of Title">
-                <select ng-model="post.categoryid">
-                <option value=""> Select Category</option>
-                <option ng-repeat="c in categories" value="{{ c.id }}">{{ c.name }}</option>
-            </select>
-
-                <select ng-model="post.userid">
-                <option value="">Select User</option>
-                 <option ng-repeat="u in users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
-            </select>
-
-        <textarea style="max-width:100%;" id="post-blog" ng-model="post.content" id="" cols="70" rows="10"></textarea>
-
-        <br>
-        
-        <input type="submit" value="Post Content">
-        </form>
-        </div>
-
-
-
     </div>
+
+    <div class="topbottons">
+        <a href="/"><button style="float: left;" type="button" class="btn btn-success btn btn-lg">Home</button></a>
+    </div>
+
+    <br>
+
+    <hr>
+
+    <div class="post-box">
+        <form ng-submit="save()">
+            <input style="border: 1px solid white; border-radius: 5px;" type="text" ng-model="post.title" placeholder="Enter name of Title">
+            <select ng-model="post.categoryid">
+                <option value=""> Select Category</option>
+                <option ng-repeat="c in category" value="{{ c.id }}">{{ c.name }}</option>
+            </select>
+
+            <select ng-model="post.userid">
+                <option value="">Select User</option>
+                 <option ng-repeat="u in user" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
+            </select>
+
+            <br>
+
+            <textarea style="max-width:100%;" id="post-blog" ng-model="post.content" id="" cols="70" rows="10"></textarea>
+
+            <br>
+
+            <input type="submit" value="Post Content">
+        </form>
+    </div>
+
+
+
+</div>
 </div>
